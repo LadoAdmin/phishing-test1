@@ -1,0 +1,75 @@
+
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ნაზილბეს ლოგო ბატლი</title>
+  <style>
+    body {
+      font-family: "Segoe UI", sans-serif;
+      background: #f9f9f9;
+      text-align: center;
+      padding: 30px;
+    }
+    h1 {
+      color: #444;
+    }
+    .logos {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 30px;
+    }
+    .logo {
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      padding: 20px;
+      width: 180px;
+      cursor: pointer;
+      transition: transform 0.2s ease;
+    }
+    .logo:hover {
+      transform: scale(1.05);
+    }
+    .like {
+      font-size: 14px;
+      color: #888;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <h1>აირჩიე შენი საყვარელი ლოგო და დააკლიკე ❤️</h1>
+  <div class="logos">
+    <div class="logo" onclick="alertPhish()">
+      <strong>ნაზილბე</strong>
+      <div class="like">1001 лайкი</div>
+    </div>
+    <div class="logo">
+      <strong>2ნაბიჯი</strong>
+      <div class="like">1012 лайკი</div>
+    </div>
+    <div class="logo">
+      <strong>ნიკორა</strong>
+      <div class="like">745 лайკი</div>
+    </div>
+    <div class="logo">
+      <strong>დეილი</strong>
+      <div class="like">800 лайკი</div>
+    </div>
+    <div class="logo">
+      <strong>ბილიონი</strong>
+      <div class="like">454 лайკი</div>
+    </div>
+  </div>
+
+  <script>
+    function alertPhish() {
+      alert("🎣 გილოცავთ! თქვენ გახდით ფიშინგის მსხვერპლი.\nეს მხოლოდ სატესტო ცნობიერების ამაღლების ინსტრუმენტია – მაგრამ რეალობაში ყურადღებით იყავით! 💡");
+    }
+  </script>
+</body>
+</html>
