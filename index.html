@@ -43,48 +43,50 @@ h1 {
 <body>
   <h1>აირჩიე შენი საყვარელი ბრენდი და დააკლიკე ❤️</h1>
 
-  <div class="logos">
-    <div class="logo">
-      <img src="nazilbe.png" alt="ნაზილბე ლოგო" width="100">
-      <div class="like">1013 Like</div>
-    </div>
-
-    <div class="logo">
-      <img src="2nabiji.png" alt="2ნაბიჯი ლოგო" width="100">
-      <div class="like">1012 Like</div>
-    </div>
-
-    <div class="logo">
-      <img src="nikora.png" alt="ნიკორა ლოგო" width="100">
-      <div class="like">745 Like</div>
-    </div>
-
-    <div class="logo">
-      <img src="deili.png" alt="დეილი ლოგო" width="100">
-      <div class="like">800 Like</div>
-    </div>
-
-    <div class="logo">
-      <img src="bilioni logo.png" alt="ბილიონი ლოგო" width="100">
-      <div class="like">905 Like</div>
-    </div>
+ <div class="logos">
+  <div class="logo" data-brand="ნაზილბე">
+    <img src="nazilbe.png" alt="ნაზილბე ლოგო" width="100">
+    <div class="like">1013 Like</div>
   </div>
+
+  <div class="logo" data-brand="2ნაბიჯი">
+    <img src="2nabiji.png" alt="2ნაბიჯი ლოგო" width="100">
+    <div class="like">1012 Like</div>
+  </div>
+
+  <div class="logo" data-brand="ნიკორა">
+    <img src="nikora.png" alt="ნიკორა ლოგო" width="100">
+    <div class="like">745 Like</div>
+  </div>
+
+  <div class="logo" data-brand="დეილი">
+    <img src="deili.png" alt="დეილი ლოგო" width="100">
+    <div class="like">800 Like</div>
+  </div>
+
+  <div class="logo" data-brand="ბილიონი">
+    <img src="bilioni.png" alt="ბილიონი ლოგო" width="100">
+    <div class="like">905 Like</div>
+  </div>
+</div>
 
 <script>
 document.addEventListener("DOMContentLoaded", () => {
   const logos = document.querySelectorAll(".logo");
-
   logos.forEach(logo => {
     logo.addEventListener("click", () => {
-      const brandName = logo.querySelector("strong").innerText.trim();
+      const brandName = logo.dataset.brand?.trim() || "";
 
       if (brandName === "ნაზილბე") {
-        alert("🎣 გილოცავთ! თქვენ გახდით ფიშინგის მსხვერპლი,რაც ნიშნავს რომ მე შენგან გადავიღე ყველა ინფორმაცია.\nმაგრამ ახლა ეს მხოლოდ სატესტო და ცნობიერების ამაღლების მცდელობა გახლდათ – ამიტომ ამის მსხვერპლი რეალობაში რომ არ გახდეთ ყურადღებით იყავით! 💡");
+        alert("🎣 გილოცავთ! თქვენ გახდით ფიშინგის მსხვერპლი, რაც ნიშნავს რომ მე შენგან გადავიღე ყველა ინფორმაცია.\nმაგრამ ახლა ეს მხოლოდ სატესტო და ცნობიერების ამაღლების მცდელობა გახლდათ – ამიტომ რეალურ ცხოვრებაში ყურადღებით იყავით! 💡");
       } else {
         alert("შენ შეცდომით ირჩევ ბრენდს");
       }
     });
   });
+});
+</script>
+
 });
 </script>
 </body>
