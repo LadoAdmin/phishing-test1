@@ -1,75 +1,92 @@
-
 <!DOCTYPE html>
 <html lang="ka">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>ნაზილბეს ლოგო ბატლი</title>
-  <style>
-    body {
-      font-family: "Segoe UI", sans-serif;
-      background: #f9f9f9;
-      text-align: center;
-      padding: 30px;
-    }
-    h1 {
-      color: #444;
-    }
-    .logos {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 20px;
-      margin-top: 30px;
-    }
-    .logo {
-      background: white;
-      border-radius: 8px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-      padding: 20px;
-      width: 180px;
-      cursor: pointer;
-      transition: transform 0.2s ease;
-    }
-    .logo:hover {
-      transform: scale(1.05);
-    }
-    .like {
-      font-size: 14px;
-      color: #888;
-      margin-top: 10px;
-    }
-  </style>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>ნაზილბეს ლოგო ბატლი</title>
+<style>
+body {
+  font-family: "Segoe UI", sans-serif;
+  background: #f9f9f9;
+  text-align: center;
+  padding: 30px;
+}
+h1 {
+  color: #444;
+}
+.logos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 30px;
+}
+.logo {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  padding: 20px;
+  width: 180px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+.logo:hover {
+  transform: scale(1.05);
+}
+.like {
+  font-size: 14px;
+  color: #888;
+  margin-top: 10px;
+}
+</style>
 </head>
 <body>
+  <h1>აირჩიე შენი საყვარელი ლოგო და დააკლიკე ❤️</h1>
   <h1>აირჩიე შენი საყვარელი ბრენდი და დააკლიკე ❤️</h1>
+
   <div class="logos">
-    <div class="logo" onclick="alertPhish()">
+    <div class="logo">
       <strong>ნაზილბე</strong>
       <div class="like">1013 Like</div>
     </div>
+
     <div class="logo">
       <strong>2ნაბიჯი</strong>
       <div class="like">1012 Like</div>
     </div>
+
     <div class="logo">
       <strong>ნიკორა</strong>
       <div class="like">745 Like</div>
     </div>
+
     <div class="logo">
       <strong>დეილი</strong>
       <div class="like">800 Like</div>
     </div>
+
     <div class="logo">
       <strong>ბილიონი</strong>
       <div class="like">905 Like</div>
     </div>
   </div>
 
-  <script>
-    function alertPhish() {
-      alert("🎣 გილოცავთ! თქვენ გახდით ფიშინგის მსხვერპლი,რაც ნიშნავს რომ მე შენგან წავიღე ყველა ინფორმაცია.\nმაგრამ ახლა ეს მხოლოდ სატესტო და ცნობიერების ამაღლების მცდელობა გახლდათ – ამიტომ ამის მსხვერპლი რეალობაში რომ არ გახდეთ ყურადღებით იყავით! 💡");
-    }
-  </script>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const logos = document.querySelectorAll(".logo");
+
+  logos.forEach(logo => {
+    logo.addEventListener("click", () => {
+      const brandName = logo.querySelector("strong").innerText.trim();
+
+      if (brandName === "ნაზილბე") {
+        alert("🎣 გილოცავთ! თქვენ გახდით ფიშინგის მსხვერპლი,რაც ნიშნავს რომ მე შენგან გადავიღე ყველა ინფორმაცია.\nმაგრამ ახლა ეს მხოლოდ სატესტო და ცნობიერების ამაღლების მცდელობა გახლდათ – ამიტომ ამის მსხვერპლი რეალობაში რომ არ გახდეთ ყურადღებით იყავით! 💡");
+      } else {
+        alert("შენ შეცდომით ირჩევ ბრენდ");
+      }
+    });
+  });
+});
+</script>
 </body>
 </html>
